@@ -1,0 +1,44 @@
+
+#cabecera {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  background-color: #5b7989;
+  border-radius: 10px 10px 0px 0px;
+  color: white;
+  text-shadow: 2px 2px 2px #02010a;
+  float: left;
+  font-size: 35px;
+  font-style: italic;
+  font-family: cursive;
+}
+#menu a {
+  float: right;
+  margin: -35px 50px 100px 0px;
+  font-style: italic;
+  font-family: cursive;
+  font-size: 20px;
+  color: white;
+}
+
+@media (max-width:815px) {
+  #menu {
+    width: 100%;
+    order: 2;
+  }
+}
+
+#central {
+  width: 100%;
+  height: 600px;
+  background-color: #82c3a6;
+}
+#central img {
+  width: 80%;
+  height: 78%;
+  margin-top: 1%;
+  margin-left: 8%;
+  margin-right: 8%;
+  border: 2px solid black;
+}
