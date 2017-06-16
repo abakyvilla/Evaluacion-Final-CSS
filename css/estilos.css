@@ -1,7 +1,62 @@
-
 #cabecera {
+  width: 100%;
+  background-color: #5b7989;
+  border-radius: 10px 10px 0px 0px;
   display: flex;
   flex-direction: row;
+}
+#cabecera header {
+  width: 50%;
+  float: left;
+  color: white;
+  font-size: 35px;
+  font-style: italic;
+  font-family: cursive;
+  text-shadow: 2px 2px 2px #02010a;
+}
+#cabecera #menu_desktop {
+  width: 50%;
+  float: right;
+}
+#menu_desktop a {
+  float: right;
+  color: white;
+  margin: 15px 20px 5px 10px;
+  font-style: italic;
+  font-family: cursive;
+  font-size: 20px;
+}
+#cabecera #menu_responsive {
+  display: none;
+}
+#menu_responsive a {
+  width: 35%;
+  color: white;
+  font-style: italic;
+  font-family: cursive;
+  font-size: 18px;
+/*  margin: 0px -10px 0px 57px; */
+}
+
+@media (max-width:901px) {
+  #cabecera header {
+    width: 100%;
+    text-align: center;
+    order: 1;
+  }
+  #cabecera #menu_desktop {
+    display: none;
+  }
+  #cabecera #menu_responsive {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    order: 2;
+  }
+}
+
+/*
+#cabecera {
   width: 100%;
   height: 100px;
   background-color: #5b7989;
@@ -9,26 +64,19 @@
   color: white;
   text-shadow: 2px 2px 2px #02010a;
   float: left;
-  font-size: 35px;
+  font-size: 40px;
   font-style: italic;
   font-family: cursive;
 }
 #menu a {
   float: right;
-  margin: -35px 50px 100px 0px;
+  margin: 20px 20px 0px 0px;
   font-style: italic;
   font-family: cursive;
   font-size: 20px;
   color: white;
 }
-
-@media (max-width:815px) {
-  #menu {
-    width: 100%;
-    order: 2;
-  }
-}
-
+*/
 #central {
   width: 100%;
   height: 600px;
