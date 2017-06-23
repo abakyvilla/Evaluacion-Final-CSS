@@ -1,6 +1,15 @@
 body {
   background-color: #02010a;
 }
+
+/* Diseño del INDEX */
+
+/* Formato Desktop */
+
+#contenido {
+  max-width: 900px;
+  margin: 1% 20% 1% 20%;
+}
 #cabecera {
   width: 100%;
   background-color: #5b7989;
@@ -12,7 +21,7 @@ body {
   width: 50%;
   float: left;
   color: white;
-  font-size: 35px;
+  font-size: 30px;
   font-style: italic;
   font-family: Dancing Script;
   text-shadow: 2px 2px 2px #02010a;
@@ -24,7 +33,7 @@ body {
 #menu_desktop a {
   float: right;
   color: white;
-  margin: 15px 20px 5px 10px;
+  margin: 15px 10px 5px 10px;
   font-style: italic;
   font-family: Dancing Script;
   font-size: 20px;
@@ -40,8 +49,120 @@ body {
   font-size: 18px;
 /*  margin: 0px -10px 0px 57px; */
 }
+#central {
+  width: 100%; /*width: 100% */
+  /*height: 600px; */
+  background-color: #82c3a6;
+}
+#central img {
+  width: 80%;
+  margin: 5% 0% 5% 8%;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px 2px #02010a;
+}
+#secundario {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #d5c75f;
+  border: 1px;
+}
+#secundario #art_paisaje {
+  width: 50%;
+  float: left;
+  margin: 2% 5% 1% 5%;
+}
+#art_paisaje img {
+  width: 100%;
+  border: solid black 2px;
+  box-shadow: 2px 2px 2px 2px #02010a;
+}
+#art_paisaje img:hover {
+  animation: rotar 2s;
+}
+@-webkit-keyframes rotar {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+    box-shadow: 0px 2px 0px 0px #82c3a6;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+#art_paisaje a {
+  font-family: Dancing Script;
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  float: left;
+  margin-left: 40%;
+}
+#secundario #art_retrato {
+  width: 50%;
+  float: right;
+  margin: 2% 5% 1% 5%;
+}
+#art_retrato img {
+  width: 100%;
+  border: solid black 2px;
+  box-shadow: 2px 2px 2px 2px #02010a;
+}
+#art_retrato img:hover {
+  animation: traslacion 2s;
+}
+@keyframes traslacion {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(5px, -20px);
+    box-shadow: 0px 2px 0px 0px #82c3a6;
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+#art_retrato a {
+  font-family: Dancing Script;
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  float: right;
+  margin-right: 40%;
+}
+#pie {
+  width: 100%;
+  background-color: #C6d5c5;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  flex-direction: row;
+  font-weight: bolder 800;
+  font-style: italic;
+  font-family: Dancing Script;
+}
+#pie div {
+  width: 25%;
+  height: 100%;
+  margin-left: 30px;
+}
+#pie img {
+  width: 5%;
+  height: auto;
+}
 
-@media (max-width:901px) {
+
+/* MEDIA QUERY MOVIL */
+
+@media (max-width:899px) {
+  #contenido {
+    width: 100%;
+    margin: 0% 0% 0% 0%;
+  }
   #cabecera header {
     width: 100%;
     text-align: center;
@@ -56,104 +177,52 @@ body {
     width: 100%;
     order: 2;
   }
+  #secundario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #d5c75f;
+    border: 1px;
+  }
+  #secundario #art_paisaje {
+    width: 100%;
+    margin: 4% 3% 3% 8%;
+  }
+  #art_paisaje img {
+    width: 80%;
+    border: solid black 2px;
+    box-shadow: 2px 2px 2px 2px #02010a;
+  }
+  #art_paisaje a {
+    margin-right: 50%;
+    margin-left: 35%;
+    font-size: 140%;
+    text-align: center;
+  }
+  #secundario #art_retrato {
+    width: 100%;
+    margin: 2% 3% 3% 8%;
+  }
+  #art_retrato img {
+    width: 80%;
+    border: solid black 2px;
+    box-shadow: 2px 2px 2px 2px #02010a;
+  }
+  #art_retrato a {
+    margin-right: 50%;
+    margin-left: 40%;
+    font-size: 140%;
+    text-align: center;
+  }
+  #pie {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #pie div {
+    width: 100%;
+    margin-left: 8%;
+  }
 }
 
-/*
-#cabecera {
-  width: 100%;
-  height: 100px;
-  background-color: #5b7989;
-  border-radius: 10px 10px 0px 0px;
-  color: white;
-  text-shadow: 2px 2px 2px #02010a;
-  float: left;
-  font-size: 40px;
-  font-style: italic;
-  font-family: cursive;
-}
-#menu a {
-  float: right;
-  margin: 20px 20px 0px 0px;
-  font-style: italic;
-  font-family: cursive;
-  font-size: 20px;
-  color: white;
-}
-*/
-#central {
-  width: 100%;
-  height: 600px;
-  background-color: #82c3a6;
-}
-#central img {
-  width: 80%;
-  height: 95%;
-  margin-top: 1%;
-  margin-left: 8%;
-  margin-right: 8%;
-  border: 2px solid black;
-}
-#secundario {
-  width: 100%;
-  height: 350px;
-  display: flex;
-  flex-direction: row;
-  background-color: #d5c75f;
-  border: 1px;
-}
-#secundario #art_paisaje {
-  background-color: red;
-  width: 50%;
-  height: 300px;
-  float: left;
-  border: solid black 2px;
-  margin: 10px 0px 0px 50px;
-}
-#art_paisaje img {
-  width: 100%;
-  height: 100%;
-}
-#art_paisaje a {
-  font-family: Dancing Script;
-  font-style: italic;
-  font-size: 20px;
-  text-align: center;
-  color: black;
-  float: left;
-  margin-left: 40%;
-}
-
-#secundario #art_retrato {
-  background-color: red;
-  width: 50%;
-  height: 300px;
-  float: right;
-  border: solid black 2px;
-  margin: 10px 60px 0px 50px;
-}
-#art_retrato img {
-  width: 100%;
-  height: 100%;
-}
-#art_retrato a {
-  font-family: Dancing Script;
-  font-style: italic;
-  font-size: 20px;
-  text-align: center;
-  color: black;
-  float: right;
-  margin-right: 40%;
-}
-#pie {
-  width: 100%;
-  height: 150px;
-  background-color: #C6d5c5;
-  border-radius: 0px 0px 10px 10px;
-  display: flex;
-  flex-direction: row;
-}
-#pie div {
-  width: 25%;
-  height: 100%;
-  margin-left: 30px;
-}
+/* Finaliza Diseño del INDEX */
