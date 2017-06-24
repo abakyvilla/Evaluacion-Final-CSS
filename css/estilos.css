@@ -5,6 +5,20 @@ body {
 /* Diseño del INDEX */
 
 /* Formato Desktop */
+#cabecera {
+  animation: salto 1s;
+}
+@keyframes salto {
+  0% {
+    margin-top: 150%;
+  }
+  60% {
+    margin-top: -5%;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
 
 #contenido {
   max-width: 900px;
@@ -155,7 +169,7 @@ body {
   height: auto;
 }
 
-/* Inicia PAISAJES.HTML */
+/* Inicia PAISAJES.HTML Y RETRATOS.HTML */
 
 #cont_paisajes {
   width: 100%;
@@ -257,7 +271,7 @@ body {
     width: 100%;
     margin-left: 8%;
   }
-  /* PAISAJES */
+  /* PAISAJES Y RETRATOS*/
 
   #cont_paisajes div {
     width: 100%;
@@ -268,5 +282,3 @@ body {
     width: 100%;
   }
 }
-
-/**/
